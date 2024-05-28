@@ -9,8 +9,22 @@ String.toLowerCase: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 String.toUpperCase: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 */
 
+function lastVowel(string) {
+ 
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let lastVowel = null;
+  for (let i = 0; i < string.length; i++) {
+    if (vowels.includes(string[i].toLowerCase())) {
+      lastVowel = string[i];
+    }
+  }
+  if (lastVowel) {
+    return lastVowel;
+  } else {
+    return null;
+  }
+}
 
-// Your code here 
 
 
 console.log(lastVowel('battery')); // 'e'

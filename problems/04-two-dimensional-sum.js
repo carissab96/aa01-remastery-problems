@@ -3,7 +3,16 @@ Write a function `twoDimensionalSum(arr)` that takes in a 2D array of numbers
 and returns the total sum of all numbers.
 */
 
-// Your code here 
+function twoDimensionalSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      sum += arr[i][j];
+    }
+  }
+  return sum
+}
+
 
 
 

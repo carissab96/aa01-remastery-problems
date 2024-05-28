@@ -4,9 +4,17 @@ as args. The function should a return a boolean indicating if two distinct
 numbers of the array add up to the `target` value. You can assume that input
 array contains only unique numbers.
 */
+function twoSum(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    let complement = target - arr[i];
 
-// Your code here 
+    if (arr.indexOf(complement) !== -1 && arr.indexOf(complement) !== i) {
+      return true;
+    }
+  }
 
+  return false;
+}
 console.log(twoSum([1, 7, 3, 0, 2], 5)); // true
 console.log(twoSum([1, 7, 3, 0, 2], 6)); // false
 console.log(twoSum([4, 6, 2, 3], 8)); // true
